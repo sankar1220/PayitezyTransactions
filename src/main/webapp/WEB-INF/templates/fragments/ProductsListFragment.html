@@ -1,0 +1,74 @@
+<div class="col-md-9">
+<div class="product_mdv">
+<div class="dropdown">
+<h3 onclick="myFunction()" class="dropbtn fltr__ttl">SORTING <i class="fa fa-angle-down"></i></h3>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#home">sort by popularity </a>
+    <a href="#about">sort by averange rating </a>
+    <a href="#contact">sort by price: low to high </a>
+    <a href="#contact">sort by price: high to low </a>
+  </div>
+  <div id="wrap">
+  <form action="" autocomplete="on">
+  <input id="search" name="search" type="text" placeholder="What're we looking for ?"/><input id="search_submit" value="Rechercher" type="submit"/>
+  </form>
+</div>
+</div>
+<!-- <div id="sb-search" class="sb-search">
+            <form>
+              <input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
+              <input class="sb-search-submit" type="submit" value="">
+              <span class="sb-icon-search"></span>
+            </form>
+          </div> -->
+
+<!-- /*<script>
+
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>*/ -->
+  <div class="prdct-item" th:each="product:${searchProducts}" th:if="${product.product_lowest_price}!='0'"><div class="prdct-item__save-btn js-save-btn"></div><a class="prdct-item__img-wrpr" th:href="'/product/'+${product.product_title}+'?next='+${product.product_link}">
+<img class="prdct-item__img" th:src="${product.product_image}" th:alt="${product.product_title}"/></a><div class="prdct-item__dtls">
+<a class="prdct-item__name" th:href="'/product/'+${product.product_title}+'?next='+${product.product_link}" th:text="${product.product_title}">
+
+</a>
+<div class="prdct-item__extr-info clearfix">
+<div class="rtng-wrpr">
+<div class="star-rating pull-left">
+                        <span style="width:42%"></span>
+                      </div>
+</div></div>
+<div class="prdct-item__prc">
+<span class="prdct-item__rpe"><i class="fa fa-inr"></i></span>
+<span class="prdct-item__prc-val" th:text="${product.product_lowest_price}">28,000</span>
+</div>
+<!-- <div class="prdct-item__str-optns"><strong>From 1 store</strong> at ₹28,000</div>
+ --><ul class="prdct-item__spcftn-wrpr"></ul>
+<!-- <div class="prdct-item__str-optns"><strong>Offers from </strong> 5 sellers</div> -->
+</div>
+</div>
+<!-- product1 -->
+
+
+<br/>
+<br/>
+</div>
+
+
+   </div>

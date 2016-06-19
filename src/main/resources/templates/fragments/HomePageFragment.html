@@ -1,0 +1,208 @@
+<div th:fragment="HomePageMainFragment" id="homeMainFrame">  
+<div th:replace="fragments/HomePageMainSliderFragment">
+</div>
+  <div class="container">
+  <div class="col-md-12 row">
+            <!-- <div class="col-md-9">
+              <span>Metronic - The Most Complete &amp; Popular Admin &amp; Frontend Theme</span>
+            </div> -->
+              <div class="col-md-4 text-center">
+                <div class="banner-box">
+                  <a class="" href="#" target="_blank"><img alt="ban1" src="../static/images/ban1.png" th:src="@{/images/ban1.png}"/></a>
+                  <div class="text-banner">
+                    <h4>NEW ARRIVAL</h4>
+                    <h3>-30% Sale</h3>
+                  </div>
+                </div>
+              </div>
+             <div class="col-md-4 text-center">
+               <div class="banner-box">
+                 <a class=" " href="#" target="_blank"><img src="../static/images/ban2.png" th:src="@{/images/ban2.png}" alt="ban2"/></a>
+                 <div class="text-banner">
+                    <h4>TRENDING</h4>
+                    <h3>-30% Sale</h3>
+                  </div>
+                </div>
+              </div>
+            <div class="col-md-4 text-center">
+              <div class="banner-box">
+                 <a class="  " href="#" target="_blank"><img alt="ban3" src="../static/images/ban3.png" th:src="@{/images/ban3.png}"/></a>
+                 <div class="text-banner">
+                    <h4>MOST TRENDING</h4>
+                    <h3>-30% Sale</h3>
+                  </div>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+      
+      
+
+      <div class="main">
+
+        <div class="container">
+
+       <!--    <div class="seperator"><i class="fa fa-cutlery"></i></div> -->
+
+
+
+<!--   <div class="steps-block steps-block-red">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 steps-block-col">
+              <i class="fa fa-truck"></i>
+              <div>
+                <h2>Free shipping</h2>
+                <em>Express delivery withing minute's</em>
+              </div>
+              <span>&nbsp;</span>
+            </div>
+            <div class="col-md-4 steps-block-col">
+              <i class="fa fa-gift"></i>
+              <div>
+                <h2>Daily Gifts</h2>
+                <em>3 Gifts daily for lucky customers</em>
+              </div>
+              <span>&nbsp;</span>
+            </div>
+            <div class="col-md-4 steps-block-col">
+              <i class="fa fa-phone"></i>
+              <div>
+                <h2>477 505 8877</h2>
+                <em>24/7 customer care available</em>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+
+   <!-- Parallax Div -->
+  <!-- <div class="bg-success col-lg-12 col-md-12 col-sm-12 h6 parallax_img1" style="height:250px">
+
+    </div> -->
+      <!-- End Parallax Div-->
+
+  <!-- <div class="strike">
+      <span>Sample Text</span>
+  </div>
+ -->
+      
+        <section class="big-menu section" th:include="fragments/HomePageMenuFragment">
+        
+      </section>
+
+
+        <!--   end .special-tab-content -->
+
+
+
+
+
+
+
+
+
+          <!-- New Content -->
+          <!-- <div class="block-banner h2">
+                  <div class="">
+                      <div class="row">
+                          <article class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                              <div class="banner">
+                                  <a href="#">
+                                      <img src="../../assets/frontend/pages/img/FoodImages/Sample/1.jpg" class="img-responsive" alt="">
+                                  </a> 
+                              </div>
+                              <div class="banner">
+                                  <a href="#">
+                                      <img src="../../assets/frontend/pages/img/FoodImages/Sample/3.jpg" class="img-responsive" alt="">
+                                  </a> 
+                              </div>
+
+                          </article>
+                          <article class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                              <div class="banner">
+                                  <a href="#">
+                                      <img src="../../assets/frontend/pages/img/FoodImages/Sample/l2.jpg" class="img-responsive" alt="">
+                                  </a>
+                              </div>
+
+                          </article>
+                          <article class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                              <div class="banner">
+                                  <a href="#">
+                                      <img src="../../assets/frontend/pages/img/FoodImages/Sample/l3.jpg" class="img-responsive" alt="">
+                                  </a>
+                              </div>
+
+                          </article>
+                          <article class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                              <div class="banner">
+                                  <a href="#">
+                                      <img src="../../assets/frontend/pages/img/FoodImages/Sample/8.jpg" class="img-responsive" alt="">
+                                  </a> 
+                              </div>
+                              <div class="banner">
+                                  <a href="#">
+                                      <img src="../../assets/frontend/pages/img/FoodImages/Sample/9.jpg" class="img-responsive" alt="">
+                                  </a>
+                              </div>
+                          </article>
+                      </div>
+                  </div>
+              </div> -->
+          <!-- End new Content -->
+          
+
+          
+          
+          <!-- BEGIN TABS AND TESTIMONIALS -->
+          <div class="row mix-block margin-bottom-40">
+
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <!-- BEGIN SIDEBAR & CONTENT 2-->
+          <div class="row margin-bottom-40 " th:include="fragments/HomePagePromotionFragment">
+            
+            
+            <!-- END SIDEBAR -->
+          </div>
+          <!-- END SIDEBAR & CONTENT -->
+          <!-- BEGIN TWO PRODUCTS & PROMO -->
+          <div id="todaySpecial" th:replace="fragments/TodaySpecialNTestimonials">
+            </div>
+            <!-- END PROMO -->
+          </div>        
+          <!-- END TWO PRODUCTS & PROMO -->
+        </div>
+      </div>
+
+      <!-- BEGIN BRANDS -->
+      <div th:replace="fragments/BestRestaurantsFragment :: BestRestaurantsFragment">
+      </div>
+      <!-- END BRANDS -->
+
+      
+    
+
+      <!-- Parallax Div style="text-align: center;margin-top: 67px;font-size: 30px;
+  "-->
+  <div th:replace="fragments/BottomParallaxFragment :: BottomParallaxFragment">
+  </div>
+</div>

@@ -1,0 +1,149 @@
+
+<th:block th:fragment="HeaderFragment(headerBotStatus,selected)">
+ <th:block th:replace="fragments/ProductSearchResultsFragment::SearchModalWindowFragment"></th:block>
+
+ <!-- header -->
+ <p th:text="${selected}"></p>
+  <header class="header" ng-controller="HeaderController">
+   <div class="header-top">
+    <!-- 
+    <div class="home_link">
+      <a href="/index">
+        <span class="home_icon">
+          <i class="fa fa-home"></i>
+        </span>
+      </a>
+    </div> -->
+     <ul class="top_left">
+      <li><a class="nav_link " href="/products?searchkey=mobiles"><span><i class="fa fa-envelope p-5" aria-hidden="true"></i></span>contact@payitezy.com</a></li>
+      <li><a class="nav_link " href="/products?searchkey=computers"><i class="fa fa-phone-square p-5" aria-hidden="true"></i>+91 9966 622 633</a></li>
+      
+      
+    </ul>
+  <ul class="top_right" style="margin-right:78px !important;">
+
+
+      <li class="option2"><div th:unless="${#authentication.principal}!='anonymousUser'"><a class="nav_link"  th:href="@{/login}">Login<span><i class="fa fa-lock p-5" aria-hidden="true"></i></span></a></div>
+
+           <th:block th:if="${#authentication.principal}!='anonymousUser'">
+
+                <div class="">
+            <input type="hidden" th:attr="ng-init='setSessionVariables(\''+${#authentication.principal.userName}+'\',\''+${#authentication.principal.id}+'\')'" />
+  <ul class="nav navbar-nav">
+  <li class="dropdown" th:if="${#authentication.principal}!='anonymousUser'">
+ <p class="m-5"><i class="fa fa-user icon_padding" aria-hidden="true"></i><a href="#" class="dropdown-toggle user_cart_btn"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" th:href="@{/myaccount/profile}" th:text="${#authentication.principal.userName}">Login/SignUp</a><i class="fa fa-angle-down icon_padding" aria-hidden="true"></i></p>
+ <ul class="dropdown-menu" style="margin-left: 11px;padding: 15px 0px;border: none;background: #fff;margin-top: 0px;">
+<li><a th:href="@{/myaccount/profile}"><span><i class="fa fa-user"></i></span>My Account</a></li>
+<li role="separator" class="divider"></li>
+<li><a th:href="@{/logout}"><span><i class="fa fa-sign-out"></i></span>Log Out</a></li>
+ </ul>
+  </li>
+</ul>
+</div>
+
+                </th:block>
+
+      </li>
+
+
+
+
+      <li><a class="nav_link " href="/products?searchkey=mobiles"><span><i class="fa fa-search p-5" aria-hidden="true"></i></span>Search</a></li>
+       <li><a class="nav_link " href="/products?searchkey=mobiles"><span><i class="fa fa-money p-5" aria-hidden="true"></i></span>Wallet</a></li>
+     
+      
+    </ul>
+    
+   </div><!-- header-top end -->
+   <div class="header-mid">
+    
+   <div class="brand col-lg-2 col-sm-2 col-xs-2 col-md-2">
+   <a href="/" class="logo">
+ <!--   <h1 class="mgt10" style="color:#fff;">Payitezy</h1> -->
+   <img src="common/img/home/images/logo/log2.png" width="100%"/>
+ </a>
+
+    </div>
+    <div class="col-lg-9">
+      <!--  <div class="form-co">
+      <input type="search" class="form-control pull-left b-b" placeholder="products search here"  ng-model="searchKeyWords" ng-keyup="getSearchWindow(searchKeyWords)"/>
+      <span class="sercj_icn"><i class="fa fa-search"></i></span>
+      <span class="sercj_buton"><a class="t-c-g">Search</a></span>
+      </div> -->
+
+      <ul class="top_right" >
+      
+     <li class="o"  th:classappend="${selected!='DEALS'}?'':'selected_li'">
+        <a href="/">
+        <p class="p-none h-p"><i class="fa flaticon-people-5 theme-color"   aria-hidden="true"></i></p>
+        <a class="nav_link " href="/"  style="margin-left: 10px;">Deals</a>
+        </a>
+        </li>
+       
+        <li  class="o" th:classappend="${selected == 'RECHARGE'}?'selected_li':''">
+        <a  href="/rechargePage"  >
+        <p class="p-none h-p" >
+        <i class="fa flaticon-technology theme-color" aria-hidden="true"></i></p>
+        <a class="nav_link" href="/rechargePage"  >Recharge</a></a></li>
+
+         <li  class="o" th:classappend="${selected == 'PAYMENTS'}?'selected_li':''"><a href="/payments">
+          <p class="p-none h-p theme-color">
+            <i class="fa flaticon-money"  aria-hidden="true"></i></p>
+        <a class="nav_link" href="/payments" >Payments</a></a></li>
+
+        <li  class="o"><div><p class="p-none h-p"><i class="fa flaticon-symbol-1 theme-color"  aria-hidden="true"></i></p>
+        <a class="nav_link " href="/products?searchkey=mobiles" style="margin-left: 10px;">Hotels</a>
+        </div></li>
+
+        <li  class="o"><div><p class="p-none h-p"><i class="fa flaticon-cinema theme-color"  aria-hidden="true"></i></p>
+        <a class="nav_link " href="/products?searchkey=mobiles">Movies</a>
+        </div></li>
+
+        <li  class="o"><div><p class="p-none h-p"><i class="fa flaticon-transport theme-color"  aria-hidden="true"></i></p>
+        <a class="nav_link " href="/products?searchkey=mobiles" style="margin-left: 15px;">Bus</a>
+        </div></li>
+
+
+        <li  class="o"><div><p class="p-none h-p">
+        <i class="fa flaticon-transport-7 theme-color"  aria-hidden="true"></i></p>
+        <a class="nav_link " href="/products?searchkey=mobiles" style="margin-left: 12px;">Flight</a></div></li>
+
+      <li  class="o"><div><p class="p-none h-p"><i class="fa flaticon-transport-5 theme-color"  aria-hidden="true">
+        
+      </i></p>
+      <a class="nav_link " href="/products?searchkey=mobiles" style="margin-left: 15px;">Train</a>
+      </div>
+      </li>
+    </ul>
+    </div>
+    
+    
+   </div><!-- header-mid end -->
+
+   <div class="header_bot" th:classappend="${headerBotStatus=='true'}?'':'hide'">
+
+    <div style="margin: 0px 46px;" >
+     <div class="row">
+     <div class="col-lg-12 p-none">
+       <div class="col-lg-3"><span class="sub_cat_menu">ALL CATEGORY<span class="p-15"><i class="fa fa-bars" aria-hidden="true"></i></span></span></div>
+     
+       <div class="col-lg-9 p-none">
+         <ul class="sub_ul"><li><a class="a1 c-wht"><i class="fa flaticon-man-1" aria-hidden="true"></i>Men Fasion</a></li>
+          <li><a class="a1 c-wht"><i class="fa flaticon-fashion" aria-hidden="true"></i>Women Fasion </a></li>
+          <li><a class="a1 c-wht"><i class="fa flaticon-technology-18" aria-hidden="true"></i>Electronics </a></li>
+          <li><a class="a1 c-wht"><i class="fa flaticon-cellphone" aria-hidden="true"></i>Mobiles</a></li>
+          <li><a class="a1 c-wht"><i class="fa flaticon-book" aria-hidden="true"></i>Books</a></li>
+          <li><a class="a1 c-wht"><i class="fa flaticon-home" aria-hidden="true"></i>Home Decor </a></li>
+          <li><a class="a1" style="color:red;"><i class="fa fa-gift" aria-hidden="true"></i>&nbsp;Today Deals </a></li>
+         </ul>
+
+       </div>
+     </div>
+     </div>
+    </div>
+   </div><!-- header-bot end-->
+
+  
+  
+  </header><!-- header end-->
+</th:block>

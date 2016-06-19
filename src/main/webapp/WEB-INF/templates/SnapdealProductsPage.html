@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html  lang="en" ng-app="Payitezy">
+
+<head th:replace="fragments/PortalHeadFragment"></head>
+
+<body>
+	<header th:replace="fragments/HeaderFragment"></header>
+	<th:block th:replace="fragments/SnapdealSearchFragment"></th:block>
+ <div class="page-content">
+            <div class="page-section1 deals">
+                <div class="dealsss">
+                    <div class="container">
+                  <th:block th:replace="fragments/SnapdealMenuFragment"></th:block>
+            	<th:block th:replace="fragments/SnapdealProductsFragment"></th:block>
+                  <th:block th:replace="fragments/FooterFragment"></th:block> 
+
+
+                    
+                </div>
+                </div>
+            </div>
+            
+            
+        </div>
+	
+	<script th:replace="fragments/PortalScriptsFragment"></script>
+</body>
+</html>

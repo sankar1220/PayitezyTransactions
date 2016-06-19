@@ -1,0 +1,78 @@
+  <div class="row" ng-controller="MenuController">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 pull-left">
+                            <div class="left-list" id="left-list" ng-click="toggleSnapdealMenu()">
+                              <h4>Top Selling Categories</h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 pull-right">
+                          <div class="right-list " id="right-list" onclick="edit()">
+                              <h4>Offers</h4>
+                            </div>  
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pdl0 pdr0">
+                            <div class="left-list-mdv animated swing bounceInDown" ng-show="false">
+                                <ul class="level0">
+                                 <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                 <p><a href=""><span class="headingText">Laptops</span></a><i class="fa fa-angle-double-right"></i></p>
+                                 </li>
+                                 <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                     <p><a href=""><span class="headingText">Mobile Phones</span></a><i class="fa fa-angle-double-right"></i></p>
+                                 </li>   
+                                 <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                     <p><a href=""><span class="headingText">women-apparel</span></a>
+                                     <i class="fa fa-angle-double-right"></i></p>
+                                 </li>   
+                                 <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                     <p><a href=""><span class="headingText">Prams &amp; Baby Gear</span></a><i class="fa fa-angle-double-right"></i></p>
+                                 </li>  
+                                 <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                     <p><a href=""><span class="headingText">Home Furnishing</span></a>
+                                     <i class="fa fa-angle-double-right"></i></p>
+                                     
+                                 </li> 
+                                 <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                     <p><a href=""><span class="headingText">sports-hobbies</span></a>
+                                     <i class="fa fa-angle-double-right"></i></p>
+                                     
+                                 </li>     
+                                </ul>
+                                <ul class="level0">
+                                 <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                 <p><a href=""><span class="headingText">Laptops</span></a>
+                                 <i class="fa fa-angle-double-right"></i></p>
+                                 </li>
+                                 <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                     <p><a href=""><span class="headingText">Mobile Phones</span></a>
+                                     <i class="fa fa-angle-double-right"></i></p>
+                                 </li>   
+                                 <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                     <p><a href=""><span class="headingText">women-apparel</span></a>
+                                     <i class="fa fa-angle-double-right"></i></p>
+                                 </li>   
+                                 <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                     <p><a href=""><span class="headingText">Prams &amp; Baby Gear</span></a><i class="fa fa-angle-double-right"></i></p>
+                                 </li>  
+                                 <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                     <p><a href=""><span class="headingText">Home Furnishing</span></a><i class="fa fa-angle-double-right"></i></p>
+                                 </li> 
+                                 <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                     <p><a href=""><span class="headingText">sports-hobbies</span></a>
+                                     <i class="fa fa-angle-double-right"></i></p>
+                                 </li>     
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pdl0 pdr0">
+                            <div class="left-list-mdv animated swing bounceInDown" id="data_lis" ng-hide="menuStatus">
+                       
+                                <ul class="level0">
+                                 <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2 pdl0 pdr0" th:each="category:${snapdealCategories}">
+                                 <p><a th:href="${'/products/snapdeal/'+category.categoryName+'?link='+#strings.replace(category.categoryLink,'&amp;','%26')}"><span class="headingText" th:text="${category.categoryName}">aptops</span></a>
+                                 <i class="fa fa-angle-double-right"></i></p>
+                                 </li>
+                                   
+                                </ul>
+                               
+                            </div>
+                        </div>
+                    </div>

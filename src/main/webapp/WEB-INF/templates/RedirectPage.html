@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<div style="margin:0px;padding:0px">
+		<table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#f3f3f3">
+			<tbody>
+				<tr>
+	 				<td height="42"></td>
+				</tr>
+				<tr>
+					<td>
+						<table cellpadding="0" cellspacing="0" border="0" align="center" width="600" bgcolor="#ffffff">
+	 						<tbody>
+	 							<tr>
+									<td colspan="3" bgcolor="#d6d6d6" height="1" style="line-height:1px"></td>
+								</tr>
+								<tr>
+									<td bgcolor="#d6d6d6" width="1"></td>
+									<td>
+										<table cellpadding="0" cellspacing="0" border="0" align="center" width="598">
+										 <tbody>
+										 	<tr>
+												<td height="20" colspan="4"></td>
+											</tr>
+											<tr>
+												 <td width="417" colspan="2" style="text-align: center;    font-size: 30px;">PayitEsy</td>
+											</tr>
+											<tr>
+												 <td height="17" colspan="4"></td>
+											</tr>
+											<tr>
+													<td colspan="4" bgcolor="#d6d6d6" height="1" style="line-height:1px"></td>
+											</tr>
+											<tr>
+												<td colspan="4" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#666666; border-bottom:1px solid #eee; ">
+													<table width="100%" cellspacing="0" cellpadding="0" style="max-width:600px;border-left:solid 0px #e6e6e6;border-right:solid 0px #e6e6e6;text-align:center;"> 
+														<tbody>
+															<tr> 
+																<td align="center" valign="top" style="color:#2c2c2c;display:block;font-weight:300;margin:0 auto;clear:both;border-bottom:0px solid #e6e6e6;padding:10px" > 
+																	<img src="common/img/home/loading.gif" width="100px" />
+																</td> 
+															</tr> 
+															<tr> 
+															 	<td style="vertical-align:top;font-size:13px;line-height:18px;font-family:Arial,sans-serif"> 
+																	<table width="100%" cellspacing="0" cellpadding="0" style="max-width:600px;border-left:solid 0px #e6e6e6;border-right:solid px #e6e6e6"> 
+																		<tbody>
+																			<tr> 
+																				<td align="left" valign="top" style="color:#2c2c2c;display:block;line-height:20px;font-weight:300;margin:0 auto;clear:both;border-bottom:0px solid #e6e6e6;;padding:20px;padding-top:0px;" bgcolor=""><br/> 
+																					<p style="padding:0;margin:0;color:#565656;font-size:13px"> </p><br/> 
+																					<p style="padding:0;margin:0;color:#565656;line-height:8px;font-size:13px;text-align: center"> Hey, <span style="color:#AFCAFC">Sankar</span> ,Please wait we transfer you in <span style="color:#AFCAFC">time</span> second(s)
+												 										<br/>
+												 										<a style="text-decoration:none" alt="Flipkart.com" href="" target="_blank"></a>
+												 									</p><br/>  
+												 								</td> 
+												 							</tr> 
+												 						</tbody>
+												 					</table> 
+											 					</td> 
+															</tr> 
+															<tr> 
+															 <td style="vertical-align:top;font-size:13px;line-height:18px;font-family:Arial,sans-serif"> 
+																<table style="border-collapse:collapse"> 	
+																</table> </td> 
+															</tr>
+															<tr> 
+															 <td style="vertical-align:top;font-size:13px;line-height:18px;font-family:Arial,sans-serif"> </td> 
+															</tr> 
+															<tr> 
+															 <td style="padding-left:32px;vertical-align:top;font-size:13px;line-height:18px;font-family:Arial,sans-serif"> 
+																<table style="width:95%;border-collapse:collapse;margin:0px 0 5px 0"> 
+																 <tbody>
+																	<tr th:if="${#httpServletRequest.getParameter('dest')=='AMAZON'}">
+																		<!-- <td></td> -->
+																		<td><a href="" title="B0157VJNMC" style="text-decoration:none;color:rgb(0,102,153);font:12px/16px Arial,sans-serif" target="_blank"> <img src="/common/img/storeimg/amazon.jpg" style="border:0"  width="150px" class="CToWUd"/> </a></td>
+																		<td></td>
+																	</tr>
+																	<tr th:if="${#httpServletRequest.getParameter('dest')=='FLIPKART'}">
+																		
+																		<td colspan="2"><a href="" title="B0157VJNMC" style="text-decoration:none;color:rgb(0,102,153);font:12px/16px Arial,sans-serif" target="_blank"> <img src="/common/img/storeimg/New-Flipkart-Logo.jpg" style="border:0"  width="150px" class="CToWUd"/> </a></td>
+																		
+																	</tr>
+																	<tr th:if="${#httpServletRequest.getParameter('dest')=='SNAPDEAL'}">
+																		
+																		<td colspan="2"><a href="" title="B0157VJNMC" style="text-decoration:none;color:rgb(0,102,153);font:12px/16px Arial,sans-serif" target="_blank"> <img src="/common/img/storeimg/snapdeal.png" style="border:0"  width="150px" class="CToWUd"/> </a></td>
+																		
+																	</tr>
+																	 <tr th:if="${#httpServletRequest.getParameter('src')=='AMAZON'}">Transfering you to<span style="color:#AFCAFC"> amazon.in</span></tr>
+																	 <tr th:if="${#httpServletRequest.getParameter('src')=='FLIPKART'}">Transfering you to<span style="color:#FF5454;font-size:large"> flipkart.com</span></tr>
+																	 <tr></tr>
+																	<tr> 
+																	 <td colspan="2" style="color:rgb(102,102,102);padding:10px 0 0 0;vertical-align:top;font-size:13px;line-height:18px;font-family:Arial,sans-serif"> <a style="text-decoration:none;color:rgb(0,102,153);font:12px/16px Arial,sans-serif" target="_blank"> Shop and get cashback upto 10.2% </a> <br/> <p>Please allow upto 48hours for cashback to track in your <br/> 
+																		<span style="font-size:20px;font-family:cursive">PayitEsy</span> account  </p><br/>  <hr />
+																		Happy Shopping !!!
+																		</td> 
+																	</tr> 
+																 </tbody>
+																</table> 
+															</td> 
+														</tr> 
+									 				</tbody>
+												</table>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+	<tr>
+	 <td height="60"></td>
+	</tr>
+</tbody>
+</table>
+
+</div>
+
+<script th:inline="javascript">
+/*<![CDATA[*/
+    // ...
+
+    var URLRedirect = [[${#httpServletRequest.getParameter('next')}]];
+    // alert(URLRedirect)
+
+
+    setTimeout('loadNewDoc()', 2000)
+   function loadNewDoc(){
+    		window.location=""+URLRedirect+"";
+		}
+
+    // ...
+/*]]>*/
+</script>
+</body>
+</html>

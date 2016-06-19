@@ -1,0 +1,283 @@
+
+<th:block th:fragment="SearchModalWindowFragment">
+<div class="modal fade searh_data-plan searchModalWindow" id="modal-fullscreen"  role="dialog" ng-controller="ProductSearchController">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<div class="search-head">
+						<!--     <div class="serch_hed-cat search-container">
+								<ul class="nav nav-tabs nav_headr ">
+									<li class="active mobile">
+										<a href="#hom" >
+											<span class="flaticon-iphone26  iphone"></span>
+											<span>Mobile</span>
+										</a>
+									</li>
+									<li class="dth" ><a href="#men1" ><span class="flaticon-parabolic13"></span><span>DTH</span> </a></li>
+									<li class="dc"><a href="#men2" ><span class="flaticon-usb48  iphone datacard"></span><span>Data Card</span> </a></li>
+									<li class="landline"><a href="#men3" >
+										<span class="flaticon-phone21  iphone"></span> <span>Landline</span></a>
+									</li>
+									<li class="electricity"><a href="#men4" >
+										<span class="flaticon-idea  iphone"></span> <span> Electricity</span> </a>
+									</li>
+									 <li>
+									 <a href="#menu5" ><span class="fa fa-plane"></span> <span>Flights</span> </a></li>
+								</ul>
+							</div> -->
+							<div class="tab-content tb-cntnr col-lg-12 mgt20 ">
+								<div id="hom" class="tab-pane fade in active">
+									<div class="recharge-section bdr-srch">
+										 <div class="row ">
+										 <!--   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 prep_post">
+												<ul class="nav nav-tabs">
+													<li class="active col-lg-6" data-toggle="tab">
+														<a><img src="prepaid1.png"/>
+															 Prepaid
+														</a>
+													</li>
+													<li class="col-lg-6" data-toggle="tab">
+														
+														<a><img src="postpaid1.png"/>
+														Postpaid
+														</a> 
+													</li>
+												</ul>
+											</div> -->
+											<div class="col-lg-8 col-md-8 col-sm-8 pdl0 col-lg-offset-1">
+												<div class="form-group">
+													<input type="text" name="productsSearch" ng-model="searchKeywords" ng-keyup="getProductsFromAPI(searchKeywords)" class="form-control mbl-no" placeholder="Products Search Here"  autofocus=""/>
+												</div>
+											</div>
+										   <!--  <div class="col-sm-3 pdl0">
+												<div class="form-group ">
+													<input type="text" class="form-control mbl-no" placeholder="Select Operater"/>
+												</div>
+											</div> -->
+										  <!--   <div class="col-sm-2 pdl0">
+												<div class="form-group ">
+													<input type="text" class="form-control mbl-no" placeholder="Enter Amount"/>
+												</div>
+											</div> -->
+											<div class="col-sm-2 pdl0 ">
+												<button class="proceed-btn">View All</button>
+											</div>
+										</div>
+									</div>
+								</div>
+						   <!--      <div id="men1" class="tab-pane fade in">
+									<div class="recharge-section bdr-srch">
+										<div class="row ">
+										   
+											<div class="col-sm-3 ">
+												<div class="form-group">
+													<input type="text" class="form-control mbl-no"  placeholder="Select Operater" autofocus=""/>
+												</div>
+											</div>
+											<div class="col-sm-3 pdl0">
+												<div class="form-group ">
+													<input type="text" class="form-control mbl-no" placeholder="Enter Your Subscriber Id"/>
+												</div>
+											</div>
+											<div class="col-sm-3 pdl0">
+												<div class="form-group ">
+													<input type="text" class="form-control mbl-no" placeholder="Enter Amount"/>
+												</div>
+											</div>
+											<div class="col-sm-3 pdl0 ">
+												<button class="proceed-btn">Proceed to Recharge</button>
+											</div>
+										</div>
+									</div>
+								</div> -->
+				   <!--              <div id="men2" class="tab-pane fade in">
+								
+									<div class="recharge-section bdr-srch">
+										<div class="row ">
+											<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 prep_post">
+												<ul class="nav nav-tabs">
+													<li class="active col-lg-6" data-toggle="tab">
+														<a><img src="prepaid1.png"/>
+															 
+														</a>
+													</li>
+													<li class="col-lg-6" data-toggle="tab">
+														
+														<a><img src="postpaid1.png"/></a> 
+													</li>
+												</ul>
+											</div>
+											<div class="col-sm-3 pdl0">
+												<div class="form-group">
+													<input type="text" class="form-control mbl-no" placeholder="Enter Data Mobile Number" autofocus=""/>
+												</div>
+											</div>
+											<div class="col-sm-3 pdl0">
+												<div class="form-group ">
+													<input type="text" class="form-control mbl-no" placeholder="Select Operater"/>
+												</div>
+											</div>
+											<div class="col-sm-2 pdl0">
+												<div class="form-group ">
+													<input type="text" class="form-control mbl-no" placeholder="Enter Amount"/>
+												</div>
+											</div>
+											<div class="col-sm-2 pdl0 ">
+												<button class="proceed-btn">Proceed to Recharge</button>
+											</div>
+										</div>
+									</div>
+								
+
+								</div> -->
+								<!-- <div id="men3" class="tab-pane fade in">
+									<div class="recharge-section bdr-srch">
+										<div class="row ">
+										   
+											<div class="col-sm-3 ">
+												<div class="form-group">
+													<input type="text" class="form-control mbl-no"  placeholder="Select Operater" autofocus=""/>
+												</div>
+											</div>
+											<div class="col-sm-3 pdl0">
+												<div class="form-group ">
+													<input type="text" class="form-control mbl-no" placeholder="Enter Number With Std Code"/>
+												</div>
+											</div>
+											<div class="col-sm-3 pdl0">
+												<div class="form-group ">
+													<input type="text" class="form-control mbl-no" placeholder="Enter Amount"/>
+												</div>
+											</div>
+											<div class="col-sm-3 pdl0 ">
+												<button class="proceed-btn">Proceed to Recharge</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id="men4" class="tab-pane fade in">
+									<div class="recharge-section bdr-srch">
+										<div class="row ">
+										   
+											<div class="col-sm-3 ">
+												<div class="form-group">
+													<input type="text" class="form-control mbl-no"  placeholder="Select Your Electricity Board" autofocus=""/>
+												</div>
+											</div>
+											<div class="col-sm-3 pdl0">
+												<div class="form-group ">
+													<input type="text" class="form-control mbl-no" placeholder="Select Your Location"/>
+												</div>
+											</div>
+											<div class="col-sm-3 pdl0">
+												<div class="form-group ">
+													<input type="text" class="form-control mbl-no" placeholder="Enter CA Number"/>
+												</div>
+											</div>
+											<div class="col-sm-3 pdl0 ">
+												<button class="proceed-btn">Proceed to Recharge</button>
+											</div>
+										</div>
+									</div>
+								
+								</div> -->
+							</div>
+						</div>
+					</div>
+			<div class="modal-body">
+				<div class="searchResults col-lg-12 col-md-12 col-sm-12" >
+
+						
+
+				
+
+
+
+
+				 </div>
+					</div>
+							</div>
+		</div>
+		
+	  </div>
+	  
+
+
+
+
+   <style type="text/css">
+   .searchModalWindow{
+	background: rgba(255, 255, 255, 0.9)!important;
+	box-shadow: 0 0 9px 6px rgba(0, 0, 0, 0.75);
+   }
+   .searchModalWindow input[name="productsSearch"]{
+	color:#C12727!important;
+		font-size: 15px!important;
+   }
+  .searchModalWindow .searchProductResult{
+	  /*background: #dedede;*/
+	  background: #FFFCFC;
+	  height: 70px;
+	  border: 1px solid transparent;
+	border-radius: 5px;
+	margin-left: 3px;
+	margin-bottom: 5px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+   .searchModalWindow .searchProductResult  .result-image{
+		width: 50px;
+	height: 50px;
+	float: left;
+	overflow: hidden;
+	border-radius: 50%;
+	margin: 9px;
+	border: 1px solid;
+   }
+  .searchModalWindow .searchProductResult .result-image img {
+	width: 50px;
+	margin-top: -13px;
+   }
+  .searchModalWindow .searchProductResult .result-details {
+	   font-size: 12px;
+	color: rgba(242, 243, 242, 0.81);
+	height: 70px;
+	margin-left: 70px;
+   }
+ .searchModalWindow .searchProductResult  .result-details .va {
+	width: 100%;
+	height: 70px;
+	display: table-cell;
+	vertical-align: middle;
+}
+.searchModalWindow .searchProductResult .result-details span {
+	font-size: 11px;
+	font-weight: 600;
+}
+
+.searchModalWindow .searchProductResult a {
+	width: 100%;
+	height: 70px;
+	float: left;
+}
+ .searchModalWindow .searchProductResult:hover {
+	background: #ebebeb;
+	border: 1px solid #cccccc;
+
+   }
+  </style>
+</th:block>
+ <div class="searchResultContainer" th:fragment="SearchProductDivFragment" >
+  <div class="col-lg-3 col-md-3 col-sm-3 " th:each="product,stat:${searchProducts}" th:if="${stat.index} &lt; 31">
+  <div class="searchProductResult animated fadeInUp">
+																				<a th:href="'/product/'+${product.product_title}+'?next='+${product.product_link}">
+								<div class="result-image"><img alt="Race to Escape" title="Race to Escape" th:src="${product.product_image}" /></div>
+								<div class="result-details"><div class="va"><span class="title text-info"  th:text="${product.product_title}">Race to Escape</span><br/><strong class="text-warning" th:inline="text">Price starts from <i class="fa fa-inr"></i>   <span class="text-danger">[[${product.product_lowest_price}]]</span></strong></div></div>
+																							</a>
+																							</div>
+						 </div>
+
+
+						
+						 </div>

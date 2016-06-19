@@ -1,0 +1,142 @@
+ <div class="page-section" style="background: #EAE8E5;" ng-controller="LoginController">
+    <div class="container">
+     <div class="row pdt40 pdb10 " style="margin-top: 80px;">
+     <!-- <div class="col-md-2" style="margin:auto 0px;"></div> -->
+
+       <div class="col-md-12 pdl0 form-signin" style="margin:2% 0px;"> 
+
+       <div class="lonin_side-view col-md-4 pdl0">
+
+       <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+     <ul class="left">
+            <i class="glyph-icon flaticon-tool9">Payitezy</i>
+            <h5>Pay with Payitezy Wallet</h5>
+            <li>Payitezy your bills </li>
+            <li>In case of refund, money will be credited to your wallet </li>
+            <li> Use Payitezy Wallet on our websites</li>
+        </ul>
+    </div>
+
+    <div class="item">
+      <ul class="left">
+            <i class="glyph-icon flaticon-tool9">Payitezy</i>
+            <h5>Pay with Payitezy Wallet</h5>
+            <li>Payitezy your bills </li>
+            <li>In case of refund, money will be credited to your wallet </li>
+            <li> Use Payitezy Wallet on our websites</li>
+        </ul>
+    </div>
+
+    <div class="item">
+       <ul class="left">
+            <i class="glyph-icon flaticon-tool9">Payitezy</i>
+            <h5>Pay with Payitezy Wallet</h5>
+            <li>Payitezy your bills </li>
+            <li>In case of refund, money will be credited to your wallet </li>
+            <li> Use Payitezy Wallet on our websites</li>
+        </ul>
+    </div>
+  </div>
+
+  
+</div>
+ 
+ 
+ 
+
+        <!--  <ul class="left">
+            <i class="glyph-icon flaticon-tool9">Payitezy</i>
+            <h5>Pay with Payitezy Wallet</h5>
+            <li>Payitezy your bills </li>
+            <li>In case of refund, money will be credited to your wallet </li>
+            <li> Use Payitezy Wallet on our websites</li>
+        </ul> -->
+       </div>     
+<div class=" col-md-8">
+ <ul class="nav nav-tabs">
+   
+    <li class="active"><a data-target="#menu1" data-toggle="tab">Login </a></li>
+    <li><a href="#menu2" data-target="#menu2" data-toggle="tab">Register</a></li>
+    
+  </ul>
+
+  <div class="tab-content ">
+    <div id="menu1" class="tab-pane fade in active pdt30">
+    <div class="col-lg-6" style="border-right:1px solid #ccc;">
+        <!-- <h2 class="form-signin-heading">Please sign in</h2> -->
+        <form method="post" action="/login">
+        <label for="inputEmail" class="">Email address</label>
+        <input type="email" name="username" id="username" class="form-control" placeholder="Enter emailId/username" required="required" autofocus=""/>
+        <label for="inputPassword" class="">Password</label>
+        <input type="password" name="password" id="password" required="required" class="form-control" placeholder="enter password"/>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"/> Remember me
+          </label>
+        </div>
+        <button class="btn btn-lg  btn-block" type="submit" name="login" value="LOGIN"><i class="glyph-icon flaticon-avatar pdr10"></i>LOGIN</button>
+        <a href="" class="frg_pwd pull-right">Forgot Password ?</a>
+        
+      </form>
+      <br/>
+      <br/>
+      </div>
+      <div class="col-lg-6">
+        <form>
+          <br/>
+          <br/>
+        <button class="btn btn-lg  btn-block facb_lgin" style="background:#365899;" type="submit"><i class="fa fa-facebook"></i>Sign in With Facebook</button>
+         <h3 class="text-center"> Or</h3>
+        <button class="btn btn-lg  btn-block gmail_lgin" style="background:#d14836" type="submit"><i class="fa fa-envelope"></i>Sign in With Gmail</button>
+        </form>
+      </div>
+    </div>
+    <div id="menu2" class="tab-pane fade pdt20">
+    <form >
+        <!-- <h2 class="form-signin-heading">Please sign in</h2> -->
+        <div class="col-md-6">
+        <h5>PERSONAL INFORMATION</h5>
+        <label  class="">Full Name</label>
+        <input type="text" id="" class="form-control" placeholder="Full Name" ng-model="register.userName" required="" autofocus=""/>
+         <label for="inputEmail" class="">Mobile Number</label>
+        <input type="text"  class="form-control" placeholder="Mobile Number" ng-model="register.mobileNo" required="" />
+         <label for="inputEmail" class="">Email Address</label>
+        <input type="email"  class="form-control" placeholder="Password" ng-model="register.emailId" required=""/>
+       
+        </div>
+         <div class="col-md-6">
+         <h5>LOGIN INFORMATION</h5>
+           <label  class="">Password</label>
+        <input type="password" id="" class="form-control" ng-model="register.password" placeholder="Password" required="" />
+        <label  class="">Confirm Password</label>
+        <input type="password" class="form-control" ng-model="register.confirmPassword" placeholder="Confirm Password" required=""/>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"/> I hearby  Agree
+          </label>
+        </div>
+        <button class="btn btn-lg  btn-block mgt20" type="submit" ng-click="getRegisterNewUser(register)"><i class="glyph-icon flaticon-user106 pdr10"></i>Create Your Payitezy Account</button>
+         </div>
+        
+      </form>
+     
+    </div>
+    
+  </div>
+
+      </div>
+       </div>
+<!--        <div class="col-md-1" style="margin:auto 0px;"></div> -->
+     </div>
+    </div>
+   </div> 

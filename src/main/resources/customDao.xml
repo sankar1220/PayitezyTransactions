@@ -1,0 +1,89 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+    xmlns:beans="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+ 
+http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+http://www.springframework.org/schema/security
+http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+ 
+ <!-- <global-method-security pre-post-annotations="enabled" >/ -->
+ 
+ <!--  <global-method-security pre-post-annotations="enabled">
+    <expression-handler ref="expressionHandler"/>
+  </global-method-security>
+
+  <beans:bean id="expressionHandler"
+      class="org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler">
+        <beans:property name="permissionEvaluator" ref="myPermissionEvaluator"/>
+  </beans:bean> -->
+ 
+    <http auto-config="true" use-expressions="true">
+    
+      <!--   <intercept-url pattern="/**" access="hasRole('ROLE_USER')" /> -->
+     <!--  <access-denied-handler error-page="/403" /> -->
+      
+        
+        <intercept-url pattern="/" access="permitAll"/> 
+        
+		<intercept-url pattern="/logout" access="permitAll"/>
+		<intercept-url pattern="/myaccount/logout" access="permitAll"/>
+		<intercept-url pattern="/logout/success" access="permitAll"/>
+		<intercept-url pattern="/denied" access="permitAll"/>
+		<intercept-url pattern="/user" access="permitAll"/>
+		<intercept-url pattern="/auth" access="permitAll"/>
+		<!-- <intercept-url pattern="/restaurant/auth" access="permitAll"/> -->
+	<!-- 	<intercept-url pattern="/Restaurants/Dashboard/index.html#/dashboards/orders" access="hasRole('ROLE_RESTAURANT')"/> -->
+		
+		<intercept-url pattern="/admin" access="permitAll"/>
+		<!-- <intercept-url pattern="/items/category/*" access="hasRole('ROLE_ADMIN')"/> -->
+		
+		
+		
+      <!--   <logout logout-url="/logout" /> -->
+       	<logout logout-success-url="/login" 
+                         invalidate-session="true" 
+                         logout-url="/logout/success" />	
+                         
+        <form-login login-page="/login" 
+			authentication-failure-url="/login/failure" 
+			default-target-url="/auth"/>
+			
+        	<!-- <form-login login-page="/restaurant/login" 
+			authentication-failure-url="/restaurant/login/failure" 
+			default-target-url="/restaurant/auth"/> -->
+        	
+		
+			
+			
+       <session-management session-fixation-protection="migrateSession" 
+            session-authentication-error-url="/auth/login/failure"> 
+         <concurrency-control max-sessions="1" 
+                error-if-maximum-exceeded="true" 
+                expired-url="/auth/maxSessions" 
+                session-registry-alias="sessionRegistry"/>
+    </session-management>
+			
+	
+	<!-- <session-management invalid-session-url="/index">	 -->
+	<session-management invalid-session-url="/index">
+            <concurrency-control max-sessions="1"
+                expired-url="/index" />
+        </session-management> 
+        
+   
+        
+    </http>
+ 
+    <authentication-manager alias="authenticationManager">
+        <authentication-provider ref="customAuthenticationProvider" />
+    </authentication-manager>
+    
+    
+   <!-- <beans:bean id="my403"
+		class="com.hungry.security.MyAccessDeniedHandler">
+		<beans:property name="errorPage" value="403" />
+	</beans:bean> -->
+    
+     
+</beans:beans>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html  lang="en" ng-app="Payitezy">
+
+<head th:replace="fragments/PortalHeadFragment"></head>
+
+<body>
+	<header th:replace="fragments/HeaderFragment"></header>
+	<th:block th:replace="fragments/FlipkartSearchFragment"></th:block>
+ <div class="page-content">
+            <div class="page-section1 deals">
+                <div class="dealsss">
+                    <div class="container">
+                  <th:block th:replace="fragments/FlipkartMenuFragment"></th:block>
+            	<th:block th:replace="fragments/FlipkartProductsFragment"></th:block>
+                   
+
+
+                    
+                </div>
+                </div>
+            </div>
+            
+            
+        </div>
+	<th:block th:replace="fragments/FooterFragment"></th:block>
+	<script th:replace="fragments/PortalScriptsFragment"></script>
+</body>
+</html>

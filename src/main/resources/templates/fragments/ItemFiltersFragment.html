@@ -1,0 +1,61 @@
+<div class="sidebar col-md-3 col-sm-5" th:fragment="ItemFiltersFragment">
+            <div class="sidebar-filter margin-bottom-25">
+              <h2>Search categories</h2>
+              <h3>Availability</h3>
+              <div class="checkbox-list">
+         <label><div class="checker"><span><input type="checkbox"/></span></div> Not Available (3)</label>
+         <label><div class="checker"><span><input type="checkbox"/></span></div> In Available (26)</label>
+              </div>
+
+              <h3>Price</h3>
+              <p>
+                <label for="amount">Range:</label>
+                <input type="text" id="amount" style="border:0; color:#f6931f; font-weight:bold;"/>
+              </p>
+              <div id="slider-range" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false"><div class="ui-slider-range ui-widget-header ui-corner-all" style="left: 10%; width: 40%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 10%;"></a><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 50%;"></a></div>
+            </div>
+
+                  <div class="sidebar-filter margin-bottom-25">
+              <h2>Filter</h2>
+              <h3>Availability</h3>
+              <div class="checkbox-list">
+                <label><div class="checker"><span><input type="checkbox"/></span></div> Not Available (3)</label>
+                <label><div class="checker"><span><input type="checkbox"/></span></div> In Stock (26)</label>
+              </div>
+               <div class="checkbox-list">
+                <label><div class="checker"><span><input type="checkbox"/></span></div>Veg</label>
+                <label><div class="checker"><span><input type="checkbox"/></span></div>Non-Veg</label>
+              </div>
+               <div class="checkbox-list">
+                <label><div class="checker"><span><input type="checkbox"/></span></div> Not Available (3)</label>
+                <label><div class="checker"><span><input type="checkbox"/></span></div> In Stock (26)</label>
+              </div>
+             <!-- <h3>Price</h3>
+               <p>
+                <label for="amount">Range:</label>
+                <input type="text" id="amount" style="border:0; color:#f6931f; font-weight:bold;">
+              </p>
+              <div id="slider-range" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false"><div class="ui-slider-range ui-widget-header ui-corner-all" style="left: 10%; width: 65.4%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 10%;"></a><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 75.4%;"></a></div> -->
+            </div>
+
+
+            
+            <div class="sidebar-products clearfix">
+              <h2>Best Restaurants</h2>
+              <div class="item">
+                <a href="shop-item.html"><img src="../static/common/lib/frontend/pages/img/FoodImages/RestLogo/res1.png" th:src="@{/common/lib/frontend/pages/img/FoodImages/RestLogo/res1.png}" alt="Some Shoes in Animal with Cut Out"/></a>
+                <h3><a href="shop-item.html">Lunch@</a></h3>
+                <div class="price">$31.00</div>
+              </div>
+              <div class="item">
+                <a href="shop-item.html"><img src="../static/common/lib/frontend/pages/img/FoodImages/RestLogo/res2.png" th:src="@{/common/lib/frontend/pages/img/FoodImages/RestLogo/res2.png}" alt="Some Shoes in Animal with Cut Out"/></a>
+                <h3><a href="shop-item.html">Dinner@</a></h3>
+                <div class="price">$23.00</div>
+              </div>
+              <div class="item">
+                <a href="shop-item.html"><img src="../static/common/lib/frontend/pages/img/FoodImages/RestLogo/res3.png" th:src="@{/common/lib/frontend/pages/img/FoodImages/RestLogo/res3.png}" alt="Some Shoes in Animal with Cut Out"/></a>
+                <h3><a href="shop-item.html">Tiffins@</a></h3>
+                <div class="price">$86.00</div>
+              </div>
+            </div>
+          </div>

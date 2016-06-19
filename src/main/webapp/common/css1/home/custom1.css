@@ -1,0 +1,242 @@
+
+/*cart page*/
+.product-itemTime input,.product-itemTime select,.cart .tax{
+	 border: 1px dashed #e8e6e2;
+  height: 20px;
+}
+/*home page menu*/
+
+
+#left-menu .menu li:hover .sub-menu {
+    left: 268px !important;
+    top: -102px !important;
+    height: 377px !important;
+}
+#left-menu .menu .mega-menu .sub-menu{
+    width: 903px!important;
+    position: absolute;
+    background-color: #FFF;
+
+}
+.searchResultsDiv{
+	position: absolute!important;
+    background-color: #FFF;
+    left: 0px !important;
+    top: 0px !important;
+    height: 515px !important;
+    z-index:999;
+     border-color: #e8e6e2;
+    border-style: solid;
+    border-width: 1px;
+}
+.searchResultsDiv .xprsBowl,.searchResultsDiv .addtobowl{
+
+display: none;
+}
+.searchResultsDiv .searchItem:hover .xprsBowl ,.searchResultsDiv .searchItem:hover .addtobowl {
+
+display: block;
+background: #ECE8E8;
+}
+.searchResultsDiv .searchItem:hover,.searchResultsDiv .searchItem:hover{
+
+/*display: block;*/
+background: rgba(236, 234, 234, 0.56);
+}
+.mid{
+    position: relative;
+    z-index: 10;
+ 
+}
+.white{
+    background-color: #FFF;
+}
+.top{
+    position: relative;
+    z-index: 10;
+}
+.bot{
+  position: relative;
+  /*z-index: 10;*/
+}
+.subMenuDiv{
+	  width: 903px!important;
+    position: absolute;
+    background-color: #FFF;
+    left: 269px !important;
+    top: 39px !important;
+    height: 385px !important;
+    padding:6px;
+        border-color: #e8e6e2;
+    border-style: solid;
+    border-width: 0 1px 1px;
+    z-index: 99;
+}
+#site-header{
+    z-index: 9999;
+}
+.lightbox {
+  /** Default lightbox to hidden */
+  
+/*display: none;*/
+  /** Position and style */
+  position: fixed;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+}
+.post-item{
+  padding-bottom:0px !important;
+ /* margin-bottom: 12px!important;*/
+}
+ .searchadspace{
+  padding:10px;
+ }
+ .myaccount-widget li{
+
+
+
+ }
+ /* .squaredOne */
+.squaredOne {
+  width: 28px;
+  height: 28px;
+  position: relative;
+  margin: 20px auto;
+  background: #fcfff4;
+  background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.squaredOne label {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  cursor: pointer;
+  background: -webkit-linear-gradient(top, #222222 0%, #45484d 100%);
+  background: linear-gradient(to bottom, #222222 0%, #45484d 100%);
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+}
+.squaredOne label:after {
+  content: '';
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: #27ae60;
+  background: -webkit-linear-gradient(top, #27ae60 0%, #145b32 100%);
+  background: linear-gradient(to bottom, #27ae60 0%, #145b32 100%);
+  box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+}
+.squaredOne label:hover::after {
+  opacity: 0.3;
+}
+.squaredOne input[type=checkbox] {
+  visibility: hidden;
+}
+.squaredOne input[type=checkbox]:checked + label:after {
+  opacity: 1;
+}
+
+
+/*checkout*/
+
+.checkoutHeads{
+  border-top: 3px solid #169c79 !important;
+}
+.checkoutContainer .checkoutHeads,.checkoutContainer .panel{
+border-radius:0px!important;
+}
+
+/*cross icon in sub category*/
+.sub-category .sel-cross-ico{
+color: #169c79;
+visibility: hidden;
+position: absolute;
+top: 4px;
+right: 4px;
+
+}
+.sub-category .selected .p-image:before {
+    opacity: 1;
+}
+.sub-category .selected .sel-cross-ico
+{
+  visibility: visible;
+}
+
+
+/*sankar edited for checkboxes*/
+
+/* SQUARED FOUR */
+.squaredFour {
+  width: 20px;  
+  margin: 20px auto;
+  position: relative;
+}
+
+.squaredFour label {
+  cursor: pointer;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  border-radius: 4px;
+
+  -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+  -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+  box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+  background: #fcfff4;
+
+  background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: -o-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: -ms-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 );
+}
+
+.squaredFour label:after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 5px;
+  background: transparent;
+  top: 4px;
+  left: 4px;
+  border: 3px solid #333;
+  border-top: none;
+  border-right: none;
+
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.squaredFour label:hover::after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+  filter: alpha(opacity=30);
+  opacity: 0.5;
+}
+
+.squaredFour input[type=checkbox]:checked + label:after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+.clearfix{
+  clear:both;
+}

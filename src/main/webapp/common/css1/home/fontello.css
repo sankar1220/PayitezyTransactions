@@ -1,0 +1,62 @@
+@font-face {
+	font-family: "Flaticon";
+	src: url("../inc/font/flaticon.html");
+	src: url("../inc/font/flaticon.html#iefix") format("embedded-opentype"),
+	url("../inc/font/flaticon-2.html") format("woff"),
+	url("../inc/font/flaticon-3.html") format("truetype"),
+	url("../inc/font/flaticon.svg/index.html") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+/*---------------------------------------------------------------*/
+/* Flat icon
+/*---------------------------------------------------------------*/
+[class^="lineicon-"]:before,
+[class*=" lineicon-"]:before,
+[class^="lineicon-"]:after,
+[class*=" lineicon-"]:after {   
+	font-family: Flaticon;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+}
+/* Line Icon */
+.lineicon-home:before { content: "\e600"; }
+.lineicon-add:before { content: "\e601"; }
+.lineicon-account:before { content: "\e602"; }
+.lineicon-alarm:before { content: "\e603"; }
+.lineicon-map-marker:before { content: "\e604"; }
+.lineicon-find:before { content: "\e605"; }
+.lineicon-heart:before { content: "\e606"; }
+.lineicon-eye:before { content: "\e607"; }
+.lineicon-pencil:before { content: "\e608"; }
+.lineicon-settings:before { content: "\e609"; }
+.lineicon-comment:before { content: "\e60a"; }
+.lineicon-email:before { content: "\e60b"; }
+.lineicon-arrow-right:before { content: "\e60c"; }
+.lineicon-pictures:before { content: "\e60d"; }
+.lineicon-download:before { content: "\e60e"; }
+.lineicon-camera:before { content: "\e60f"; }
+.lineicon-notification:before { content: "\e610"; }
+.lineicon-close:before { content: "\e611"; }
+.lineicon-flag:before { content: "\e612"; }
+.lineicon-accept:before { content: "\e613"; }
+.lineicon-coffee:before { content: "\e614"; }
+.lineicon-document:before { content: "\e615"; }
+.lineicon-data:before { content: "\e616"; }
+.lineicon-cascade:before { content: "\e617"; }
+.lineicon-phone:before { content: "\e618"; }
+.lineicon-arrow-left:before { content: "\e619"; }
+.lineicon-circle-dashboard:before { content: "\e61a"; }
+.lineicon-tennis:before { content: "\e61b"; }
+.lineicon-print:before { content: "\e61c"; }
+.lineicon-cloud:before { content: "\e61d"; }
+.lineicon-upload-up:before { content: "\e61e"; }
+.lineicon-drink:before { content: "\e61f"; }
+.lineicon-ecology:before { content: "\e620"; }
+.lineicon-compass:before { content: "\e621"; }
+.lineicon-delete:before { content: "\e622"; }
+.lineicon-trash:before { content: "\e623"; }
+.lineicon-bookmark:before { content: "\e624"; }
+.lineicon-star:before { content: "\e625"; }
+.lineicon-locked:before { content: "\e626"; }
+.lineicon-award:before { content: "\e627"; }

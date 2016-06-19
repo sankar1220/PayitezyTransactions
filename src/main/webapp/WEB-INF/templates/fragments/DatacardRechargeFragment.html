@@ -1,0 +1,375 @@
+      
+                  <div class="col-md-12" ng-init="datacard_recharge_type='prepaid_datacard'">
+                     <label class="mg-50 radio-label">
+                        <input type="radio" name="optionsRadios1" id="optionsRadios3"  value="prepaid_datacard" ng-model="datacard_recharge_type"  ng-checked="true"/>
+                          Prepaid Datacard
+                      </label>
+                      <label class="radio-label">
+                        <input type="radio" name="optionsRadios1" id="optionsRadios4"  value="post_datacard" ng-model="datacard_recharge_type"/>Postpaid Datacard
+                       </label>
+                          </div>
+
+
+      <div class="col-md-3">
+               <span class="input_spl input--hoshi">
+           <input type="text" ng-keyup="getDataCardPlans($event)"  ng-model="datanumber" class="input__field input__field--hoshi" pattern="[0-9]*" maxlength="10"/>
+          <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+            <span class="input__label-content input__label-content--hoshi">Mobile Number</span>
+          </label>
+        </span>
+           </div>
+          <div class="col-md-3">
+           <span class="input_spl input--hoshi">
+          <!-- <input class="input__field input__fieldhoshi" type="text" id="input-4" /> -->
+              <select ng-model="datacard_operator" class="input__field input__field--hoshi form-control__datacard_select1" aria-label="ngSelected demo">
+                           <!--  <option value="" disabled="disabled"  selected="selected"><span style="color:#dddddd"></span></option> -->
+                           <option  value="1">Airtel</option>
+                           <option value="2">Vodafone</option>
+                           <option value="3">BSNL TopUp</option>
+                           <option value="4">Reliance CDMA</option>
+                           <option value="5">Reliance GSM</option>
+                           <option value="6">Aircel</option>
+                           <option value="8">Idea</option>
+                           <option value="9">Tata Indicom</option>
+                           <option value="11">Tata Docomo</option>
+                           <option value="12">Virgin CDMA</option>
+                           <option value="16">Uninor</option>
+                        </select>
+          <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+            <span class="input__label-content input__label-content--hoshi">Operator</span>
+          </label>
+        </span>
+           </div>
+
+           
+           <div class="col-md-2">
+             
+            <span class="input_spl input--hoshi">
+         <input type="text" ng-model="amount" class="input__field input__field--hoshi"/>
+          <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+            <span class="input__label-content input__label-content--hoshi">Amount</span>
+          </label>
+        </span>
+           </div>
+           
+              <div class="col-md-2 p-none brw_plans">
+             <a class="f-12 c-blk">Browse Plans of <span>&nbsp;{{operatorarray.finaloperator}}</span> Operator</a><!--  <select ng-model="operator" id="inputEmail"  class="form-control__datacard_select" aria-label="ngSelected demo" disabled="disabled" style="border-bottom:none !important;">
+                            <option value="" disabled="disabled"  selected="selected"><span style="color:#dddddd">operator</span></option>
+                           <option  value="1">Airtel</option>
+                           <option value="2">Vodafone</option>
+                           <option value="3">BSNL TopUp</option>
+                           <option value="4">Reliance CDMA</option>
+                           <option value="5">Reliance GSM</option>
+                           <option value="6">Aircel</option>
+                           <option value="8">Idea</option>
+                           <option value="9">Tata Indicom</option>
+                           <option value="11">Tata Docomo</option>
+                           <option value="12">Virgin CDMA</option>
+                           <option value="16">Uninor</option>
+                        </select> -->
+                <select ng-model="numberCircle" id="inputEmail"  class="form-control__datacard_select" aria-label="ngSelected demo" disabled="disabled" style="border-bottom:none !important;font-size:12px !important;">
+                            <option value="" disabled="disabled"  selected="selected"><span style="color:#dddddd">of Circle</span></option>
+                           <option  value="1">Andhra Pradesh</option>
+                           <option value="2">Assam</option>
+                           <option value="3">Bihar &amp; Jharkhand</option>
+                           <option value="4">Chennai</option>
+                           <option value="5">Delhi</option>
+                           <option value="6">Gujarat</option>
+                           <option value="7">Haryana</option>
+                           <option value="8">Himachal Pradesh</option>
+                           <option value="9">Jammu &amp; Kashmir</option>
+                           <option value="10">Karnataka</option>
+                           <option value="11">Kerala</option>
+                           <option value="12">Kolkata</option>
+                           <option value="13">Maharashtra &amp; Goa (except Mumbai)</option>
+                           <option value="14">Madhya Pradesh &amp; Chhattisgarh</option>
+                           <option value="15">Mumbai</option>
+                           <option value="16">North East</option>
+                           <option value="17">Orissa</option>
+                           <option value="18">Punjab</option>
+                            <option value="19">Rajasthan</option>
+                           <option value="20">Tamil Nadu</option>
+                           <option value="21">Uttar Pradesh - East</option>
+                           <option value="22">Uttar Pradesh - West</option>
+                            <option value="23">West Bengal</option>
+                        </select>
+           </div>
+           
+
+           <div class="col-md-2 btn-mg">
+           
+             <button  ng-click="getDatacard(data)" class="btn btn-proceed">Proceed</button>
+           </div>
+
+
+
+
+
+<!-- asasas -->
+  <!-- Plans for Recharges -->
+            <div class="col-lg-12 datacard_recharge_plans hide" style="background:rgba(255, 255, 255, 0.78);margin-top:55px;">
+                  <div class="row b-b">
+                     <div class="col-lg-2"><a class="c-blk">
+                      <label class="mg-50 radio-label">
+          Browse plans of Vodafone Andhra Pradesh
+          </label></a></div>
+                     <div class="col-lg-2 p-none"><a class="c-blk"><label>TalkTime</label></a></div>
+                     <div class="col-lg-2 p-none"><a class="c-blk"><label>Validity</label></a></div>
+                     <div class="col-lg-4"><a class="c-blk"><label>Description</label></a></div>
+                     <div class="col-lg-2"><a class="c-blk"><label>Price</label></a></div>
+                  </div>
+
+             <ul class="nav col-lg-2 col-md-2 col-sm-2">
+
+             <li><a class="f-c-w" data-toggle="tab" href="#4GData">
+               <span class="dt_pic tab_icn"></span>
+               <span class=" tab_txt">4G Data</span>
+            </a></li>
+            <li><a class="f-c-w" data-toggle="tab" href="#3GData">
+               <span class="dt_pic tab_icn"></span>
+               <span class=" tab_txt">3G Data</span>
+            </a></li>
+             <li><a class="f-c-w" data-toggle="tab" href="#2GData">
+               <span class="dt_pic tab_icn"></span>
+               <span class=" tab_txt">2G Data</span>
+            </a></li>
+          
+         </ul>
+          <div class="tab-content col-lg-10 col-md-10 col-sm-10" style="margin-top: 19px;">
+                     <div id="topup" class="tab-pane fade in active">
+                        <div class="row">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">7.77</a></div>
+                     <div class="col-lg-3"><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+                     <div class="col-lg-2 p-none"><a class="plans_btn f-c-w ">10<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  <div class="row" style="padding:15px 0px;">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">15</a></div>
+                     <div class="col-lg-3"><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+                     <div class="col-lg-2 p-none"><a class="plans_btn f-c-w ">15<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  <div class="row" style="padding:15px 0px;">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">25</a></div>
+                     <div class="col-lg-3"><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+               <div class="col-lg-2 p-none"><a class="plans_btn f-c-w ">25<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  <div class="row" style="padding:15px 0px;">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">50</a></div>
+                     <div class="col-lg-3"><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+                     <div class="col-lg-2 p-none"><a class="plans_btn f-c-w ">50<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  <div class="row" style="padding:15px 0px;">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">110</a></div>
+                     <div class="col-lg-3 "><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+                     <div class="col-lg-2 p-none"><a class="plans_btn f-c-w" >110<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  </div>
+                    
+                 
+                     <div id="fulltalk" class="tab-pane fade in">
+                        <div class="row">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">7.77</a></div>
+                     <div class="col-lg-3"><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+                     <div class="col-lg-2 p-none"><a class="plans_btn f-c-w ">10<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  <div class="row" style="padding:15px 0px;">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">15</a></div>
+                     <div class="col-lg-3"><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+                     <div class="col-lg-2 p-none"><a class="plans_btn f-c-w ">15<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  <div class="row" style="padding:15px 0px;">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">25</a></div>
+                     <div class="col-lg-3"><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+               <div class="col-lg-2 p-none"><a class="plans_btn f-c-w ">25<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  <div class="row" style="padding:15px 0px;">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">50</a></div>
+                     <div class="col-lg-3"><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+                     <div class="col-lg-2 p-none"><a class="plans_btn f-c-w ">50<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  <div class="row" style="padding:15px 0px;">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">110</a></div>
+                     <div class="col-lg-3 "><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+                     <div class="col-lg-2 p-none"><a class="plans_btn f-c-w" >110<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  </div>
+                    
+                
+                     <div id="4GData" class="tab-pane fade in">
+                      <div class="row">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">7.77</a></div>
+                     <div class="col-lg-3"><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+                     <div class="col-lg-2 p-none"><a class="plans_btn f-c-w ">10<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  <div class="row" style="padding:15px 0px;">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">15</a></div>
+                     <div class="col-lg-3"><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+                     <div class="col-lg-2 p-none"><a class="plans_btn f-c-w ">15<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  <div class="row" style="padding:15px 0px;">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">25</a></div>
+                     <div class="col-lg-3"><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+               <div class="col-lg-2 p-none"><a class="plans_btn f-c-w ">25<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  <div class="row" style="padding:15px 0px;">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">50</a></div>
+                     <div class="col-lg-3"><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+                     <div class="col-lg-2 p-none"><a class="plans_btn f-c-w ">50<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  <div class="row" style="padding:15px 0px;">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">110</a></div>
+                     <div class="col-lg-3 "><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+                     <div class="col-lg-2 p-none"><a class="plans_btn f-c-w" >110<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  </div>
+
+
+                     <div id="3GData" class="tab-pane fade in">
+                       <div class="row">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">7.77</a></div>
+                     <div class="col-lg-3"><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+                     <div class="col-lg-2 p-none"><a class="plans_btn f-c-w ">10<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  <div class="row" style="padding:15px 0px;">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">15</a></div>
+                     <div class="col-lg-3"><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+                     <div class="col-lg-2 p-none"><a class="plans_btn f-c-w ">15<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  <div class="row" style="padding:15px 0px;">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">25</a></div>
+                     <div class="col-lg-3"><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+               <div class="col-lg-2 p-none"><a class="plans_btn f-c-w ">25<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  <div class="row" style="padding:15px 0px;">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">50</a></div>
+                     <div class="col-lg-3"><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+                     <div class="col-lg-2 p-none"><a class="plans_btn f-c-w ">50<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  <div class="row" style="padding:15px 0px;">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">110</a></div>
+                     <div class="col-lg-3 "><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+                     <div class="col-lg-2 p-none"><a class="plans_btn f-c-w" >110<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  </div>
+                    
+               
+               <div id="2GData" class="tab-pane fade in">
+                     <div class="row">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">7.77</a></div>
+                     <div class="col-lg-3"><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+                     <div class="col-lg-2 p-none"><a class="plans_btn f-c-w ">10<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  <div class="row" style="padding:15px 0px;">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">15</a></div>
+                     <div class="col-lg-3"><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+                     <div class="col-lg-2 p-none"><a class="plans_btn f-c-w ">15<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  <div class="row" style="padding:15px 0px;">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">25</a></div>
+                     <div class="col-lg-3"><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+               <div class="col-lg-2 p-none"><a class="plans_btn f-c-w ">25<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  <div class="row" style="padding:15px 0px;">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">50</a></div>
+                     <div class="col-lg-3"><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+                     <div class="col-lg-2 p-none"><a class="plans_btn f-c-w ">50<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  <div class="row" style="padding:15px 0px;">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">110</a></div>
+                     <div class="col-lg-3 "><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+                     <div class="col-lg-2 p-none"><a class="plans_btn f-c-w" >110<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  </div>
+                     <div id="roaming" class="tab-pane fade in">
+                     <div class="row" style="padding:15px 0px;">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">7.77</a></div>
+                     <div class="col-lg-3"><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+                     <div class="col-lg-2 p-none"><a class="plans_btn f-c-w ">10<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  <div class="row" style="padding:15px 0px;">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">15</a></div>
+                     <div class="col-lg-3"><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+                     <div class="col-lg-2 p-none"><a class="plans_btn f-c-w ">15<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  <div class="row" style="padding:15px 0px;">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">25</a></div>
+                     <div class="col-lg-3"><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+               <div class="col-lg-2 p-none"><a class="plans_btn f-c-w ">25<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  <div class="row" style="padding:15px 0px;">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">50</a></div>
+                     <div class="col-lg-3"><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+                     <div class="col-lg-2 p-none"><a class="plans_btn f-c-w ">50<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  <div class="row" style="padding:15px 0px;">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">110</a></div>
+                     <div class="col-lg-3 "><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+                     <div class="col-lg-2 p-none"><a class="plans_btn f-c-w" >110<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  </div>
+
+
+                  <div id="specialoffers" class="tab-pane fade in">
+                       <div class="row">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">7.77</a></div>
+                     <div class="col-lg-3"><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+                     <div class="col-lg-2 p-none"><a class="plans_btn f-c-w ">10<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  <div class="row" style="padding:15px 0px;">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">15</a></div>
+                     <div class="col-lg-3"><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+                     <div class="col-lg-2 p-none"><a class="plans_btn f-c-w ">15<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  <div class="row" style="padding:15px 0px;">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">25</a></div>
+                     <div class="col-lg-3"><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+               <div class="col-lg-2 p-none"><a class="plans_btn f-c-w ">25<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  <div class="row" style="padding:15px 0px;">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">50</a></div>
+                     <div class="col-lg-3"><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+                     <div class="col-lg-2 p-none"><a class="plans_btn f-c-w ">50<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  <div class="row" style="padding:15px 0px;">
+                        <div class="col-lg-2 p-none"><a class="f-c-w">110</a></div>
+                     <div class="col-lg-3 "><a class="f-c-w">N/A</a></div>
+                     <div class="col-lg-5 p-none"><a class="f-c-w">Regular Talktime</a></div>
+                     <div class="col-lg-2 p-none"><a class="plans_btn f-c-w" >110<i class="fa fa-inr" aria-hidden="true"></i></a></div>
+                  </div>
+                  </div>  
+                  </div>
+                </div> 
+<!-- End Plans for Recharges -->
